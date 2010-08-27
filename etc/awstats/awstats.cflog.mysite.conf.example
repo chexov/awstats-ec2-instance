@@ -1,0 +1,11 @@
+##Fields: date time x-edge-location sc-bytes c-ip cs-method cs(Host) cs-uri-stem sc-status cs(Referer) cs(User-Agent)
+
+Include "/etc/awstats/awstats.model.conf"
+
+LogFormat="%time2 %cluster %bytesd %host %method %virtualname %url %code %referer %ua"
+LogSeparator="\t"
+HostAliases="REGEX[.cloudfront\.net] REGEX[.*]"
+
+SiteDomain="cf.mysite.com"
+LogFile="merge-logs.sh mysite_cf |"
+

@@ -1,0 +1,11 @@
+##Fields: date time x-edge-location sc-bytes c-ip cs-method cs(Host) cs-uri-stem sc-status cs(Referer) cs(User-Agent)
+
+Include "/etc/awstats/awstats.model.conf"
+
+LogFormat="%other %extra1 %time1 %host %logname %other %extra2 %url %methodurl %code %extra3 %bytesd %other %extra4 %extra5 %refererquot %uaquot %other"
+LogSeparator=" "
+
+
+SiteDomain="mysite.com"
+LogFile="merge-logs.sh mysite.com_s3 |"
+

@@ -1,0 +1,12 @@
+#!/bin/sh
+set -ue
+LOGDIR=${PWD}/logs
+
+[ -d ${LOGDIR} ] || mkdir -p ${LOGDIR}
+
+# For S3 public items
+fetch-daily-logs.sh s3://logbucket.for.mysite/logfolder/ ${LOGDIR}/mysite.com_s3/
+
+# For CloudFront deployments
+fetch-daily-logs.sh s3://logbucket.for.mysite/logfolder/CLOUDFRONTID. ${LOGDIR}/mysite.com_cf/
+

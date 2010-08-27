@@ -1,0 +1,4 @@
+etc/awstats/awstats.*.conf
+etc/s3cfg
+fetch-logs.sh
+run.sh
