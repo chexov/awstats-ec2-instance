@@ -1,0 +1,8 @@
+#!/bin/sh
+export PATH=$PWD/bin:$PWD/s3cmd-0.9.9.91:$PATH
+
+# Change it for your needs
+export RUN_INSTANCE_PARAMS="ami-e733398e -t m1.small -z us-east-1a -g secgroup -k sshkey"
+export EC2_PRIVATE_KEY=pk.pem
+export EC2_CERT=cert.pem
+
